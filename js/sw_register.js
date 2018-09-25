@@ -1,12 +1,12 @@
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('./sw.js', {scope:'./'});
+    navigator.serviceWorker.register('../sw.js', {scope:'./'});
   });
 }
 
 
 if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/sw.js')
+	navigator.serviceWorker.register('../sw.js')
 	.then(function(registration) {
 		console.log('Registration worked!,scope is:',registration.scope);
 	})
