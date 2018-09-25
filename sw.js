@@ -8,6 +8,7 @@ let CACHE_FILES = [
           'js/dbhelper.js',
           'restaurant.html',
           'js/sw_register.js',
+          '/js/',
           'data/restaurants.json',
           'img/1.jpg',
           'img/2.jpg',
