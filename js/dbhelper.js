@@ -8,8 +8,8 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
-    const port ='./data/restaurants.json' // Change this to your server port
-    return './data/restaurants.json';
+    const port =8000 // Change this to your server port
+    return 'https://github.com/webpagearshi/service-worker/data/restaurants.json';
   }
 
   /**
@@ -143,14 +143,14 @@ class DBHelper {
    * Restaurant page URL.
    */
   static urlForRestaurant(restaurant) {
-    return (`./restaurant.html?id=restaurant.id`);
+    return (`./restaurant.html?id=${restaurant.id}`);
   }
 
   /**
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`/img/restaurant-img.jpg`);
+    return (`./img/$restaurant.photograph`);
   }
 
   /**
