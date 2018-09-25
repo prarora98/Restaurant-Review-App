@@ -1,4 +1,3 @@
-
 let CACHE_VERSION = 'restaurant-app-static-v1';
 let CACHE_FILES = [
     './',
