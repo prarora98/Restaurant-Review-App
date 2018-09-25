@@ -1,4 +1,4 @@
-# Mobile Web Specialist Certification Course
+# Restaurant review app stage 1 project:still working on it.Readme is not up to date.
 ---
 #### _Three Stage Course Material Project - Restaurant Reviews_
 
