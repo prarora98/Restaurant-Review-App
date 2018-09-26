@@ -429,7 +429,7 @@ display: inline-block;
   }
 }
 
-
+@media screen and (min-width: 850px){
   .inside header {
     position: fixed;
     top: 0;
@@ -469,4 +469,4 @@ display: inline-block;
     position: absolute;
     width: 60vw;
   }
-
+}
