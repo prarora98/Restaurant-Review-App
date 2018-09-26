@@ -1,24 +1,24 @@
 let CACHE_VERSION = 'restaurant-app-static-v1';
 let CACHE_FILES = [
     './',
-    'service-worker/css/styles.css',
-    'service-worker/index.html',
-    'service-worker/restaurant.html',
-          'service-worker/js/main.js',
-          'service-worker/js/restaurant_info.js',
-          'service-worker/js/dbhelper.js',
-          'service-worker/js/sw_register.js',
-          'service-worker/data/restaurants.json',
-          'service-worker/img/1.jpg',
-          'service-worker/img/2.jpg',
-          'service-worker/img/3.jpg',
-          'service-worker/img/4.jpg',
-          'service-worker/img/5.jpg',
-          'service-worker/img/6.jpg',
-          'service-worker/img/7.jpg',
-          'service-worker/img/8.jpg',
-          'service-worker/img/9.jpg',
-          'service-worker/img/10.jpg',
+    './css/styles.css',
+    './index.html',
+    './restaurant.html',
+          './js/main.js',
+          './js/restaurant_info.js',
+          './js/dbhelper.js',
+          './js/sw_register.js',
+          './data/restaurants.json',
+          './img/1.jpg',
+          './img/2.jpg',
+          './img/3.jpg',
+          './img/4.jpg',
+          './img/5.jpg',
+          './img/6.jpg',
+          './img/7.jpg',
+          './img/8.jpg',
+          './img/9.jpg',
+          './img/10.jpg',
           ];
 
 
@@ -35,14 +35,17 @@ self.addEventListener('install', function (event) {
 
 self.addEventListener('activate', function (event) {
     event.waitUntil(
-        caches.keys().then(function(keys){
-            return Promise.all(keys.map(function(key, i){
-                if(key !== CACHE_VERSION){
-                    return caches.delete(keys[i]);
-                }
-            }))
+        caches.keys().then(function(cacheNames){
+            return Promise.all(
+                cacheNames.filter(function(cacheName) {
+                    return cacheName.startsWith('restaurant-') &&
+                        cacheName != CACHE_VERSION;
+                }).map(function(cacheName) {
+                    return caches.delete(cacheName);
+                })
+            );
         })
-    )
+    );
 });
 
 self.addEventListener('fetch', function (event) {
