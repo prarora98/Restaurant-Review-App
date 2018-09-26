@@ -510,7 +510,7 @@ flex-flow: row;
   }
 }
 @media screen and (min-width: 1050px){
-   #footer .inside{
+   .inside #footer{
 	   width: 55%;
 	}
 }
