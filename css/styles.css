@@ -467,6 +467,6 @@ display: inline-block;
   .inside #footer {
     bottom: 0;
     position: absolute;
-    width: 50vw;
+    width: 60vw;
   }
 
