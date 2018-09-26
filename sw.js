@@ -54,10 +54,11 @@ self.addEventListener('fetch', function (event) {
             if(response){
                 return response;
             }
-           return fetch(event.request);
-            if(event.request.url.indexOf('restaurant.html') != -1 || event.request.url.indexOf('leaflet') != -1){
+          
+            elseif(event.request.url.indexOf('restaurant.html') != -1 || event.request.url.indexOf('leaflet') != -1){
           cache.put(event.request, response.clone());
         }
+             return fetch(event.request);
         })
     )
 });
