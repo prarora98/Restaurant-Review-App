@@ -48,22 +48,33 @@ self.addEventListener('activate', function (event) {
     );
 });
 
-self.addEventListener('fetch', function (event) {
-    event.respondWith(
-        caches.match(event.request).then(function(response){
-            if(response){
-                return response;
-            }
-          
-            else(event.request.url.indexOf('restaurant.html') != -1 || event.request.url.indexOf('leaflet') != -1){
+//self.addEventListener('fetch', function (event) {
+    //event.respondWith(
+       // caches.match(event.request).then(function(response){
+     //       if(response){
+          //      return response;
+         //   }
+        //  
+          //  else(event.request.url.indexOf('restaurant.html') != -1 || event.request.url.indexOf('leaflet') != -1){
+          //cache.put(event.request, response.clone());
+       // }
+         //    return fetch(event.request);
+       // })
+   // )
+//});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(resp) {
+      return resp || fetch(event.request).then(function(response) {
+        return caches.open('restaurant-app-static-v1').then(function(cache) {
           cache.put(event.request, response.clone());
-        }
-             return fetch(event.request);
-        })
-    )
+          return response;
+        });  
+      });
+    })
+  );
 });
-
-
 
        
         
