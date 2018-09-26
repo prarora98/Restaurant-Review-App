@@ -65,21 +65,21 @@ self.addEventListener('activate', function (event) {
    // )
 //});
 
-//self.addEventListener('fetch', function(event) {
- // event.respondWith(
- //   caches.match(event.request).then(function(resp) {
-  //    return resp || fetch(event.request).then(function(response) {
-  //      return caches.open('restaurant-app-static-v1').then(function(cache) {
-  //          if(event.request.url.indexOf('restaurant.html') != -1 || event.request.url.indexOf('leaflet') != -1){
-     //     cache.put(event.request, response.clone());
-   //       return response;
-        //    }
-      //  });  
-     // });
-    //})
- // );
-//});
 self.addEventListener('fetch', function(event) {
+ event.respondWith(
+  caches.match(event.request).then(function(resp) {
+   return resp || fetch(event.request).then(function(response) {
+       return caches.open('restaurant-app-static-v1').then(function(cache) {
+          if(event.request.url.indexOf('restaurant.html') != -1 || event.request.url.indexOf('leaflet') != -1){
+        cache.put(event.request, response.clone());
+        return response;
+            }
+       });  
+      });
+    })
+ );
+});
+/*self.addEventListener('fetch', function(event) {
   var requestUrl = new URL(event.request.url);
 
   if (requestUrl.origin === location.origin) {
@@ -99,6 +99,6 @@ self.addEventListener('fetch', function(event) {
       return response || fetch(event.request);
     })
   );
-});
+});*/
        
         
