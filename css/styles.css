@@ -506,6 +506,6 @@ flex-flow: row;
   .inside #footer {
     bottom: 0;
     position: absolute;
-    width: 46%;
+    width: 50vw;
   }
 }
