@@ -451,6 +451,9 @@ flex-flow: row;
   #restaurants-list li{
     width: 250px;
   }
+  .inside #footer{
+	  width:45%;
+	}
 }
 
 @media screen and (min-width: 1150px){
