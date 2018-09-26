@@ -25,7 +25,7 @@ Visit the site in your browser at http://localhost:8000
 
 ### Link to access website:
 
-https://webpagearshi.github.io/service-worker/
+https://webpagearshi.github.io/Restaurant-Review-App/.
 
 ## Leaflet.js and Mapbox:
 
@@ -54,9 +54,12 @@ I have accessed lot of resources especially for accessibility and service worker
 
 8. https://www.sitepoint.com/getting-started-with-service-workers/
 
+9. www.w3school.com
+
 Walkthrough video of project: https://www.youtube.com/watch?v=92dtrNU1GQc&t=1396s
 
-
+### Special Mention
+Udacity Team and my study group mentor who has been very helpful.
 
 
 
