@@ -397,46 +397,7 @@ display: inline-block;
     width: 250px;
   }
 }
-/*@media screen and (min-width: 768px){
-#restaurant-container{
-  display: flex;
-  flex-wrap: wrap;
-  
-}
-#restaurant-name{
-  width: calc(50%-60px);
-  order: 0;
-}
-#restaurant-img{
-  width: 40%;
-  order: 1;
-  max-height: 300px;
-  height: 30vw;
-}
-#restaurant-cusine{
-  width: 50px;
-  float: right;
-  order: 2;
-  padding:0;
-  margin: 0;
-}
-#restaurant-address{
-width: 45%;
-padding: 0;
-margin: 0;
-padding-left: 10px;
-margin-left: 10px;
-order: 3;
-height: 2vw;
-flex-direction: row;
-}
-#restaurant-hours{
-width: 40%;
-float: right;
-order: 4;
-flex-flow: row;
-}
-}*/
+
 @media screen and (min-width: 800px){
   #restaurants-list li{
     width: 270px;
@@ -506,6 +467,6 @@ flex-flow: row;
   .inside #footer {
     bottom: 0;
     position: absolute;
-    width: 50%;
+    width: 50vw;
   }
 
