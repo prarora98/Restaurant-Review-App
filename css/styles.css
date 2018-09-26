@@ -468,14 +468,6 @@ flex-flow: row;
   }
 }
 
-@media (min-width: 1050px) {
-     .inside #footer{
-	  bottom: 0;
-   	  position: absolute;
-	  width: 46%;
-	}
-
-  }
 
   .inside header {
     position: fixed;
