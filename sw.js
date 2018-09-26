@@ -2,6 +2,8 @@ let CACHE_VERSION = 'restaurant-app-static-v1';
 let CACHE_FILES = [
     './',
     'service-worker/css/styles.css',
+    'service-worker/index.html',
+    'service-worker/restaurant.html',
           'service-worker/js/main.js',
           'service-worker/js/restaurant_info.js',
           'service-worker/js/dbhelper.js',
