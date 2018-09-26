@@ -451,10 +451,7 @@ flex-flow: row;
   #restaurants-list li{
     width: 250px;
   }
-  .inside #footer{
-	  width: 46%;
-	}
-}
+ }
 
 @media screen and (min-width: 1150px){
   #restaurants-list li{
@@ -471,17 +468,15 @@ flex-flow: row;
   }
 }
 
-@media (min-width: 850px) {
- /* #restaurants-list li {
-    max-width: 30%;
+@media (min-width: 1050px) {
+     .inside #footer{
+	  bottom: 0;
+   	  position: absolute;
+	  width: 46%;
+	}
+
   }
-  #restaurants-list p {
-    width: 66%;
-  }  
-  #restaurants-list li h1 {
-    height: 41px;
-  }
-*/
+
   .inside header {
     position: fixed;
     top: 0;
